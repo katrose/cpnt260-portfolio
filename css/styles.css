@@ -1,8 +1,13 @@
 @import url('reset.css');
 @import url('fonts.css');
 
+/*  Global                    */
+/* ========================== */
+
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto Slab', serif;
+
+  background-color: rgb(236, 236, 233);
 }
 
 h1 {
@@ -10,8 +15,8 @@ h1 {
   font-weight: normal;
 }
 
-/* ========================== */
-/*        Hero Section        */
+
+/*  Hero Section              */
 /* ========================== */
 header {
   height: 100vh;
@@ -26,7 +31,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center vertically */
-  align-items: center;     /* Make each item width of text and not width of container */
+  align-items: center;     /* Make each item width of content and not width of container */
 }
 
 header h1, nav {
@@ -40,8 +45,8 @@ header h1 {
   margin-bottom: .5em;
 }
 
-/* ========================== */
-/*           Nav Bar          */
+
+/* Nav Bar                    */
 /* ========================== */
 
 nav ul {
@@ -55,8 +60,43 @@ nav a {
   padding: .5em;
 }
 
+
+/* Blog Page                  */
 /* ========================== */
-/*        Contact Page        */
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1em;
+}
+
+/* Card */
+.blog-item {
+
+  padding: .7em;
+
+  background-color: white;
+  border: 1px solid black;
+
+}
+
+.blog-container img {
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Blog Post                  */
+/* ========================== */
+.blog-post .bold-italic {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.blog-post p{
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Contact Page               */
 /* ========================== */
 
 .contact {
