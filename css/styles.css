@@ -15,9 +15,9 @@ h1 {
   font-weight: normal;
 }
 
-
 /*  Hero Section              */
 /* ========================== */
+
 header {
   height: 100vh;
 
@@ -63,9 +63,11 @@ nav a {
 
 /* Blog Page                  */
 /* ========================== */
+
 .blog {
   padding: 1em;
 }
+
 .blog-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -94,10 +96,14 @@ nav a {
 
 /* Blog Post                  */
 /* ========================== */
-.blog-post {
-  padding: 1em;
-  background-color: white;
 
+.blog-post {
+  margin: auto;
+  padding: 1em;
+
+  width: 60vw;
+
+  background-color: white;
 }
 .blog-post .bold-italic {
   font-weight: bold;
@@ -106,6 +112,36 @@ nav a {
 
 .blog-post p {
   font-family: 'Open Sans', sans-serif;
+}
+
+.blog-post img {
+  display: block;
+  margin: auto;
+}
+
+.blog-post figure {
+  background-color: lightgray;
+  border: 1px dotted black;
+}
+
+.blog-post figure img {
+  border: 1px solid red;
+}
+
+.blog-post figure figcaption {
+  text-align: center;
+  border: 1px dotted black;
+}
+
+/* .blog-post img {
+  float: left;
+  margin-right: 1em;
+
+} */
+
+#blog-img-1 {
+  float: left;
+  margin-right: 1em;
 }
 
 
