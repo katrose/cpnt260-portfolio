@@ -1,0 +1,56 @@
+@import url('reset.css');
+@import url('fonts.css');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+  font-size: 3.5em;
+  font-weight: normal;
+}
+
+/* ========================== */
+/*        Hero Section        */
+/* ========================== */
+header {
+  height: 100vh;
+
+  background-color: rgb(35, 146, 184, 0.5 );
+
+  background-image: url('/img/link-hoang-UoqAR2pOxMo-unsplash.jpg');
+  background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center;     /* Make each item width of text and not width of container */
+}
+
+header h1, nav {
+  background-color: black;
+  color: white;
+  padding: .3em;
+}
+
+/* Minor positioning adjustments */
+header h1 {
+  margin-bottom: .5em;
+}
+
+/* ========================== */
+/*           Nav Bar          */
+/* ========================== */
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav a { 
+  text-decoration: none;
+  color: inherit;
+  padding: .5em;
+}
