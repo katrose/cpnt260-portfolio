@@ -195,5 +195,12 @@ footer {
 
   background-color: black;
   color: white;
-  text-align: center;
+
+  display: flex;
+  justify-content: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
 }
