@@ -163,3 +163,11 @@ nav a {
   display: flex;
   flex-direction: column;
 }
+
+.contact input, textarea {
+  margin-bottom: 1em;
+}
+
+.contact input[type="submit"] {
+  align-self: flex-start;
+}
