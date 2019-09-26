@@ -60,6 +60,14 @@ nav a {
   padding: .5em;
 }
 
+/* Footer                     */
+/* ========================== */
+footer {
+  color: white;
+
+  display: flex;
+}
+
 
 /* Blog Cards                 */
 /* ========================== */
