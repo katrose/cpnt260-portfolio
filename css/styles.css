@@ -14,6 +14,10 @@ h1 {
   font-size: 3.5em;
 }
 
+main {
+  min-height: 90vh;
+}
+
 /*  Hero Section              */
 /* ========================== */
 
@@ -60,31 +64,23 @@ nav a {
   padding: .5em;
 }
 
-/* Footer                     */
-/* ========================== */
-footer {
-  color: white;
-
-  display: flex;
-}
-
-
 /* Blog Cards                 */
 /* ========================== */
-
 .blog {
   padding: 1em;
+
+  min-height: 90vh;
 }
 
 .blog-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 1em;
+  align-items: end;
 }
 
 /* Card */
 .blog-item {
-
   padding: .7em;
 
   background-color: white;
@@ -94,6 +90,10 @@ footer {
   display: flex;
   flex-direction: column;
 
+}
+
+.blog-item img {
+  margin-bottom: .7em;
 }
 
 .blog-card-grid img {
@@ -146,7 +146,6 @@ footer {
   font-weight: bold;
 }
 
-
 .blog-post h2 {
   margin-bottom: .5em;
 
@@ -180,9 +179,8 @@ footer {
 /* ========================== */
 
 .contact {
-  height: 50vh;
   width: 70vw;
-  margin: 20vh auto;
+  margin: auto;
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
