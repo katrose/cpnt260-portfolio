@@ -38,8 +38,12 @@ main {
 
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center vertically */
-  align-items: center;     /* Make each item width of text and not width of container */
+
+  /* Center vertically */
+  justify-content: center; 
+
+  /* Make each item width of text and not width of container (for background-color) */
+  align-items: center;     
 }
 
 .hero .fa-snowflake {
@@ -61,7 +65,6 @@ main {
   margin-bottom: .5em;
 }
 
-
 /* Nav Bar                    */
 /* ========================== */
 
@@ -69,11 +72,12 @@ nav ul {
   padding-left: 0;
   display: flex;
   justify-content: center;
-
 }
 
 nav ul li {
   padding: .5em;
+
+  /* For CSS transition */
   position: relative;
 }
 
@@ -98,6 +102,7 @@ nav li:hover:after {
 
 /* Blog Cards                 */
 /* ========================== */
+
 .blog {
   margin: auto;
   padding: 1em;
@@ -123,6 +128,7 @@ nav li:hover:after {
   align-items: center;
 }
 
+/* Make content stretch horizontally */
 .short-post-grid .blog-item {
   display: flex;
 }
@@ -227,6 +233,7 @@ blockquote q::before {
 }
 
 .blog-post .article-header {
+  /* Make header fill space of padding from parent container */
   margin: -1em -1em 1em -1em;
   padding: 1.5em;
 
@@ -277,10 +284,11 @@ blockquote q::before {
 .blog-img-2 {
   float: left;
 
-  /* The following two functions (polygon & url) do roughly the same thing for this image. The polygon doesn't shape all the way to the bottom; text goes back to rectangular shape near the bottom right vertex of image. Tried to tweak with CSS Shapes Editor (Chrome Extension) but it wasn't quite working  */
+  /* The following two functions (polygon & url) do roughly the same thing for this image. The polygon doesn't shape all the way to the bottom; text goes back to rectangular shape near the bottom right vertex of image. Tried to tweak with CSS Shapes Editor (Chrome Extension) but didn't get it to work  */
 
   /* shape-outside: polygon(80% 0, 100% 100%, 0 100%); */
   shape-outside: url('/img/blog/all-girls-team.png');
+
   shape-margin: .5em;
 }
 
@@ -356,7 +364,6 @@ blockquote q::before {
 }
 
 /* Form Styling */
-
 .contact form {
   display: flex;
   flex-direction: column;
