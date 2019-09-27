@@ -15,8 +15,12 @@ h1 {
   font-size: 3.5em;
 }
 
+header {
+  height: 10vh;
+}
+
 main {
-  min-height: 90vh;
+  min-height: 80vh;
 }
 
 /*  Hero Section              */
@@ -43,6 +47,8 @@ main {
 
   background-color: rgb(17, 17, 17, 0.8);
   color: white;
+
+  text-align: center;
 }
 
 /* Minor positioning adjustments */
@@ -55,12 +61,32 @@ main {
 /* ========================== */
 
 nav ul {
+  padding-left: 0;
   display: flex;
   justify-content: center;
+
 }
 
-nav a { 
+nav ul li {
   padding: .5em;
+  position: relative;
+}
+
+nav li:after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  background: white;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+nav li:hover:after {
+  width: 100%;
+  left: 0;
 }
 
 /* Blog Cards                 */
@@ -164,7 +190,7 @@ nav a {
   font-style: italic;
 }
 
-.blog-post header {
+.blog-post .article-header {
   margin: -1em -1em 1em -1em;
   padding: 1.5em;
 
@@ -201,6 +227,9 @@ nav a {
 
 .blog-post img {
   display: block;
+  
+  /* Make sure it scales with parent container */
+  max-width: 100%;
 }
 
 /* Image Positioning */
@@ -273,6 +302,21 @@ nav a {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
 }
+
+.contact a {
+  padding: .2em;
+
+  font-weight: bold;
+
+  color: #70CAD1;
+}
+
+/* Text line spacing */
+.contact h1 {
+  margin-bottom: .2em;
+}
+
+/* Form Styling */
 
 .contact form {
   display: flex;
