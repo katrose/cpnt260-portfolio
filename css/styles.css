@@ -72,6 +72,8 @@ nav ul li {
   position: relative;
 }
 
+/* CSS Transition for animated underline */
+/* Credit: https://tobiasahlin.com/blog/css-trick-animating-link-underlines */
 nav li:after {
   bottom: 0;
   content: "";
@@ -185,6 +187,31 @@ nav li:hover:after {
   background-color: white;
 }
 
+blockquote {
+  padding: 1em;
+  background-color: lightgray;
+
+  position: relative;
+}
+
+blockquote q {
+  display: block;
+  quotes: "“" "”";
+}
+
+blockquote q::before {
+  content: open-quote;
+
+  color: red;
+  
+  font-family: Georgia, serif;
+  font-size: 6em;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .blog-post .bold-italic {
   font-weight: bold;
   font-style: italic;
@@ -227,7 +254,7 @@ nav li:hover:after {
 
 .blog-post img {
   display: block;
-  
+
   /* Make sure it scales with parent container */
   max-width: 100%;
 }
