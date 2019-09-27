@@ -189,12 +189,16 @@ nav li:hover:after {
 
 blockquote {
   padding: 1em;
-  background-color: lightgray;
 
   position: relative;
 }
 
 blockquote q {
+  padding-left: 2em;
+
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+
   display: block;
   quotes: "“" "”";
 }
@@ -202,14 +206,14 @@ blockquote q {
 blockquote q::before {
   content: open-quote;
 
-  color: red;
+  color: black;
   
   font-family: Georgia, serif;
   font-size: 6em;
 
   position: absolute;
   left: 0;
-  top: 0;
+  top: 5px;
 }
 
 .blog-post .bold-italic {
@@ -267,6 +271,9 @@ blockquote q::before {
 
 .blog-img-2 {
   float: left;
+
+  /* The following two functions (polygon & url) do roughly the same thing for this image. The polygon doesn't shape all the way to the bottom; text goes back to rectangular shape near the bottom right vertex of image. Tried to tweak with CSS Shapes Editor (Chrome Extension) but it wasn't quite working  */
+
   /* shape-outside: polygon(80% 0, 100% 100%, 0 100%); */
   shape-outside: url('/img/blog/all-girls-team.png');
   shape-margin: .5em;
