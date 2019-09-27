@@ -59,14 +59,13 @@ nav ul {
 }
 
 nav a { 
-  text-decoration: none;
-  color: inherit;
   padding: .5em;
 }
 
 /* Blog Cards                 */
 /* ========================== */
 .blog {
+  margin: auto;
   padding: 1em;
 
   min-height: 90vh;
@@ -85,11 +84,6 @@ nav a {
 
   background-color: white;
   border: 1px solid rgb(216, 216, 216);
-
-  /* Try spacing things out evenly with flex */
-  display: flex;
-  flex-direction: column;
-
 }
 
 .blog-item img {
@@ -99,6 +93,12 @@ nav a {
 .blog-card-grid img {
   object-fit: contain;
   max-width: 100%;
+}
+
+/* "Read More" URLs */
+.blog-item a {
+  font-weight: bold;
+  color: darkblue;
 }
 
 /* Positioning Adjustments */
@@ -127,7 +127,7 @@ nav a {
   margin: -1em -1em 1em -1em;
   padding: 1.5em;
 
-  background-color: black;
+  background-color: rgb(17, 17, 17);
   color: white;
 }
 
@@ -142,6 +142,7 @@ nav a {
 
 .blog-post h1 {
   margin: 0;
+  margin-bottom: .4em;
 
   font-weight: bold;
 }
