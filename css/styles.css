@@ -68,7 +68,18 @@ nav a {
   margin: auto;
   padding: 1em;
 
+  width: 70vw;
+
   min-height: 90vh;
+}
+
+.blog section {
+  margin-bottom: 2em;
+}
+
+.blog h3 {
+  margin-bottom: 2em;
+  border-bottom: 1px solid black;
 }
 
 .blog-card-grid {
@@ -76,6 +87,18 @@ nav a {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 1em;
   align-items: end;
+}
+
+.short-post-grid {
+
+}
+
+.short-post-grid .blog-item {
+  display: flex;
+}
+
+.short-post-grid .blog-item img {
+  margin-right: 1em;
 }
 
 /* Card */
