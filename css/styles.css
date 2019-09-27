@@ -12,14 +12,13 @@ body {
 
 h1 {
   font-size: 3.5em;
-  font-weight: normal;
 }
 
 /*  Hero Section              */
 /* ========================== */
 
 .hero {
-  height: 100vh;
+  height: 90vh;
 
   background-color: rgb(35, 146, 184, 0.5 );
 
@@ -111,7 +110,7 @@ footer {
 /* ========================== */
 
 .blog-post {
-  margin: auto;
+  margin: 10px auto 0;
   padding: 1em;
 
   width: 50vw;
@@ -125,7 +124,11 @@ footer {
 }
 
 .blog-post header {
-  margin-bottom: 1em;
+  margin: -1em -1em 1em -1em;
+  padding: 1.5em;
+
+  background-color: black;
+  color: white;
 }
 
 .blog-post .author-date {
@@ -139,6 +142,8 @@ footer {
 
 .blog-post h1 {
   margin: 0;
+
+  font-weight: bold;
 }
 
 
@@ -155,28 +160,12 @@ footer {
 
 .blog-post img {
   display: block;
-  margin: .4em;
 }
-
-/* Rework this */
-/* .blog-post figure {
-  background-color: lightgray;
-  border: 1px dotted black;
-}
-
-.blog-post figure img {
-  border: 1px solid red;
-}
-
-.blog-post figure figcaption {
-  text-align: center;
-  border: 1px dotted black;
-} */
 
 /* Image Positioning */
 .blog-img-1 {
   float: right;
-  margin-left: 1em;
+  margin: 0 0 0 .5em;
 }
 
 .blog-img-2 {
@@ -184,7 +173,6 @@ footer {
   /* shape-outside: polygon(80% 0, 100% 100%, 0 100%); */
   shape-outside: url('/img/blog/all-girls-team.png');
   shape-margin: .5em;
-
 }
 
 
@@ -192,6 +180,7 @@ footer {
 /* ========================== */
 
 .contact {
+  height: 50vh;
   width: 70vw;
   margin: 20vh auto;
   display: grid;
@@ -218,16 +207,25 @@ footer {
 /* Footer                     */
 /* ========================== */
 footer {
-  padding: 1em;
+  height: 10vh;
 
-  background-color: black;
+  background-color: rgb(17, 17, 17, 0.8);
   color: white;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
+footer .social-media {
+  padding: .5em;
+}
 footer a {
   text-decoration: none;
   color: inherit;
+}
+
+footer p {
+  margin: .5em 0 0 0;
 }
