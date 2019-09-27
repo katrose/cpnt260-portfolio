@@ -109,6 +109,13 @@ nav a {
   border: 1px solid rgb(216, 216, 216);
 }
 
+.blurb-item {
+  padding: .7em;
+
+  background-color: white;
+  border: 1px solid rgb(216, 216, 216);
+}
+
 .blog-item img {
   margin-bottom: .7em;
 }
@@ -203,14 +210,28 @@ nav a {
 /* ========================== */
 
 .contact {
-  width: 70vw;
+  width: 65vw;
   margin: auto;
+
+  /* Use grid to align the top of section elements */
   display: grid;
   grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 3fr;
 }
 
 .contact section {
   padding: 1em;
+}
+
+/* Use grid to align the top of section elements */
+.contact section:nth-child(1) {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
+
+.contact section:nth-child(2) {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
 }
 
 .contact form {
@@ -224,6 +245,10 @@ nav a {
 
 .contact input[type="submit"] {
   align-self: flex-start;
+}
+
+.contact .contact-buttons {
+  display: flex;
 }
 
 /* Footer                     */
