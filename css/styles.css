@@ -5,7 +5,7 @@
 /* ========================== */
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Fira Mono', sans-serif;
 
   background-color: rgb(236, 236, 233);
   color: #3e3e3e;
@@ -69,16 +69,17 @@ main {
 /* ========================== */
 
 nav ul {
-  padding-left: 0;
   display: flex;
   justify-content: center;
 }
 
 nav ul li {
-  padding: .5em;
-
   /* For CSS transition */
   position: relative;
+}
+
+nav a {
+  padding: 2em;
 }
 
 /* CSS Transition for animated underline */
@@ -125,7 +126,7 @@ nav li:hover:after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 1em;
-  align-items: center;
+  align-items: end;
 }
 
 /* Make content stretch horizontally */
@@ -182,9 +183,11 @@ nav li:hover:after {
 }
 
 /* Positioning Adjustments */
-.blog h2 {
+.blog h1, .blog h2 {
   margin-bottom: 1em;
+  text-align: center;
 }
+
 
 /* Blog Post                  */
 /* ========================== */
@@ -198,6 +201,8 @@ nav li:hover:after {
   background-color: white;
 }
 
+/* Pull Quote Styling */
+
 blockquote {
   padding: 1em;
 
@@ -207,7 +212,7 @@ blockquote {
 blockquote q {
   padding-left: 2em;
 
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lora', serif;
   font-style: italic;
 
   display: block;
@@ -426,6 +431,8 @@ footer {
 
   background-color: rgb(17, 17, 17, 0.8);
   color: white;
+
+  text-align: center;
 
   display: flex;
   flex-direction: column;
