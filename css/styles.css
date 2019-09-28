@@ -5,14 +5,18 @@
 /* ========================== */
 
 body {
-  font-family: 'Fira Mono', sans-serif;
+  font-family: 'Lora', sans-serif;
 
   background-color: rgb(236, 236, 233);
   color: #3e3e3e;
 }
 
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', monospace;
+}
 h1 {
-  font-size: 3.5em;
+  font-size: 2.7em;
 }
 
 header {
@@ -27,78 +31,48 @@ main {
 /* ========================== */
 
 .hero {
-  height: 90vh;
-
-  background-color: rgb(35, 146, 184, 0.5 );
-
-  background-image: url('/img/link-hoang-UoqAR2pOxMo-unsplash.jpg');
-  background-blend-mode: lighten;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  display: flex;
-  flex-direction: column;
-
-  /* Center vertically */
-  justify-content: center; 
-
-  /* Make each item width of text and not width of container (for background-color) */
-  align-items: center;     
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 1em;
 }
 
-.hero .fa-snowflake {
-  text-shadow: 3px 6px white;
+.hero-left, .hero-right {
+  align-self: center;
 }
 
-.hero h1, nav {
-  padding: .3em;
-
-  background-color: rgb(17, 17, 17, 0.8);
-  color: white;
-
+/* Icon sizing & positioning */
+.hero-left {
+  font-size: 1.5rem;
   text-align: center;
 }
 
-/* Minor positioning adjustments */
-.hero h1 {
+.hero-right {
+  padding-right: 3em;
+}
+
+.hero-right h1 {
+  font-weight: normal;
+
+  /* Minor positioning adjustments */
   margin-top: .5em;
   margin-bottom: .5em;
 }
 
+.hero-right .highlight {
+  font-weight: bold;
+}
 /* Nav Bar                    */
 /* ========================== */
 
 nav ul {
   display: flex;
-  justify-content: center;
-}
-
-nav ul li {
-  /* For CSS transition */
-  position: relative;
 }
 
 nav a {
-  padding: 2em;
-}
-
-/* CSS Transition for animated underline */
-/* Credit: https://tobiasahlin.com/blog/css-trick-animating-link-underlines */
-nav li:after {
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 1px;
-  left: 50%;
-  position: absolute;
-  background: white;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
-}
-
-nav li:hover:after {
-  width: 100%;
-  left: 0;
+  /* Use margin to space out links to keep underline with text only */
+  /* padding: 2em; */
+  margin-right: 3em;
+  border-bottom: 1px dashed;
 }
 
 /* Blog Cards                 */
