@@ -53,6 +53,10 @@ nav a {
   border-bottom: 1px dashed;
 }
 
+nav a:hover {
+  color: rgb(173, 215, 229)
+}
+
 /*  Hero Section              */
 /* ========================== */
 
@@ -219,6 +223,7 @@ nav a {
 /* Pull Quote Styling */
 blockquote {
   padding: 1em;
+  font-size: 1.5em;
 
   position: relative;
 }
