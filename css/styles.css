@@ -70,6 +70,10 @@ main {
 /* ========================== */
 
 nav ul {
+  padding-left: 0;
+
+  list-style-type: none;
+
   display: flex;
   justify-content: center;
 }
@@ -184,6 +188,14 @@ nav a {
   background-color: white;
 }
 
+.series-info {
+  margin-bottom: 1.5em;
+}
+
+.series-info p {
+  margin: 0;
+}
+
 /* Pull Quote Styling */
 
 blockquote {
@@ -251,7 +263,7 @@ blockquote q::before {
   border-bottom: 1px solid black;
 }
 
-.blog-post p {
+.blog-post p, .blog-post ul {
   font-family: 'Lora', serif;
   line-height: 1.4em;
 }
