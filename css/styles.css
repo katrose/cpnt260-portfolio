@@ -11,23 +11,26 @@ body {
 }
 
 h1 {
-  font-size: 3.5em;
+  font-size: 3.3em;
 }
 
 main {
-  min-height: 83vh;
+  min-height: 80vh;
 }
 
 /* Nav Bar                    */
 /* ========================== */
-
 header {
-  height: 7vh;
-
+  height: 10vh;
   background-color: rgb(17, 17, 17, 0.8);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav {
+
   padding: .3em;
 
   color: white;
@@ -480,19 +483,28 @@ footer p {
   /* Contact Form */
   .contact {
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-gap: 0;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
     grid-template-areas: 
       "blurb"
       "form";
   }
 
+  .contact section {
+    padding-top: 0;
+  }
+
   .contact-blurb {
     grid-area: blurb;
+
+    align-self: center;
   }
 
   section.contact-form {
     padding-top: 0;
+    padding-bottom: 1em;
+
     grid-area: form;
   }
 }
