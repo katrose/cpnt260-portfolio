@@ -402,13 +402,19 @@ blockquote q::before {
   border: 1px solid white;
   border-radius: 15px;
 
-  background-color: rgb(173, 215, 229, 0.5);
+  background-color: rgba(173, 215, 229, 0.5);
 }
 
 .contact .contact-buttons {
   display: flex;
 }
 
+.contact input[type="submit"]:hover,  .contact input[type="reset"]:hover{
+  cursor: pointer;
+  
+  background-color: rgba(173, 215, 229, 1);
+  color: black;
+}
 .contact input[type="submit"] {
   margin-right: 1em;
 }
@@ -537,6 +543,16 @@ footer p {
   /* Try to center the pull quote to avoid too many line breaks */
   .blog-post blockquote {
     margin: 0;
+  }
+
+  /* Article #1: Image tweaks */
+  .blog-img-1 {
+    padding-bottom: 1em;
+  }
+
+  /* Push text under image in first article (kinda hacky?!?!)*/
+  .blog-img-2 {
+    float: none;
   }
 
   /* Contact Page */
