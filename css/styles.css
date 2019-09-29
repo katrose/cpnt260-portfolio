@@ -54,7 +54,6 @@ nav a {
 /* ========================== */
 
 .hero {
-  /* background-color: rgba(35, 146, 184, 0.5 ); */
   background-color: rgba(255, 255, 255, 0.1);
 
   background-image: url('/img/janko-ferlic-specialdaddy-sfL_QOnmy00-unsplash.jpg');
@@ -76,13 +75,17 @@ nav a {
   text-shadow: 3px 6px white;
 }
 
-.hero h1 {
+.hero h1, .hero p {
   padding: .3em;
 
   background-color: rgb(17, 17, 17, 0.8);
   color: white;
 
   text-align: center;
+}
+
+.hero p {
+  font-size: 1.2em;
 }
 
 /* Minor positioning adjustments */
