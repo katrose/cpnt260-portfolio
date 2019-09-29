@@ -4,10 +4,14 @@
 /*  Global                    */
 /* ========================== */
 body {
-  font-family: 'Fira Mono', sans-serif;
+  font-family: 'Lora', serif;
 
   background-color: rgb(236, 236, 233);
   color: #3e3e3e;
+}
+
+h1, h2, h3, h4, h5, h6, nav, .contact {
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
@@ -58,12 +62,11 @@ nav a:hover {
 /* ========================== */
 
 .hero {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(173, 215, 229);
   background-image: url('/img/janko-ferlic-specialdaddy-sfL_QOnmy00-unsplash.jpg');
 
-  background-blend-mode: lighten;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
 
   display: flex;
   flex-direction: column;
@@ -89,7 +92,8 @@ nav a:hover {
 }
 
 .hero p {
-  font-size: 1.2em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6em;
 }
 
 /* Minor positioning adjustments */
@@ -135,11 +139,6 @@ nav a:hover {
   align-items: end;
 }
 
-/* Article text font */
-.blog-item p, .blurb-item p {
-  font-family: 'Lora', serif;
-}
-
 /* Cards */
 .blog-item {
   padding: .7em;
@@ -162,16 +161,30 @@ nav a:hover {
   box-shadow: inset 0 -7px 0 0 rgba(130, 206, 228, 0.3);
 }
 
+/* "Read More" URL Hover */
+/* This stacks the background-color and box-shadow on top of one another when hovering - overall color isn't uniform */
+/* 
+.blog-item a:hover {
+  background-color: rgba(19, 149, 186, .15);
+}
+*/
+
+/* BOX-SHADOW: inset | offset-x | offset-y | blur-radius | spread-radius | color */
+.blog-item a:hover {
+  box-shadow: inset 5px -20px 0 0 rgba(130, 206, 228, 0.3);
+}
+
+
 /* Short Post Section */
-.short-post-grid .blog-item {
+.short-post-section .blog-item {
   display: flex;
 }
 
-.short-post-grid .blog-item img {
+.short-post-section .blog-item img {
   margin-right: 1em;
 }
 
-.blurb-item {
+.snippet-box {
   padding: .7em;
 
   background-color: white;
@@ -180,21 +193,9 @@ nav a:hover {
   display: flex;
 }
 
-.blurb-item img {
+.snippet-box img {
   padding-right: 1em;
   max-height: 150px;
-}
-
-/* This stacks the background-color and box-shadow on top of one another when hovering - overall color isn't uniform */
-/* 
-.blog-item a:hover {
-  background-color: rgba(19,149,186,.15);
-}
-*/
-
-/* BOX-SHADOW: inset | offset-x | offset-y | blur-radius | spread-radius | color */
-.blog-item a:hover {
-  box-shadow: inset 5px -20px 0 0 rgba(130, 206, 228, 0.3);
 }
 
 /* Blog Post                  */
@@ -215,6 +216,14 @@ nav a:hover {
 
 .series-info p {
   margin: 0;
+}
+
+.blog-post a {
+  box-shadow: inset 0 -7px 0 0 rgba(130, 206, 228, 0.3);
+}
+
+.blog-post a:hover {
+  box-shadow: inset 5px -20px 0 0 rgba(130, 206, 228, 0.3);
 }
 
 /* Pull Quote Styling */
@@ -305,6 +314,7 @@ blockquote q::before {
 .blog-img-2 {
   float: left;
 
+  shape-outside: polygon(0px 1px, 291px 5px, 370px 466px, 0px 466px);
   shape-outside: url('/img/blog/all-girls-team.png');
 
   shape-margin: .5em;
@@ -312,20 +322,17 @@ blockquote q::before {
 
 /* Gallery                    */
 /* ========================== */
+
 .gallery {
   margin: auto;
   padding-left: 2em;
   padding-right: 2em;
+  padding-bottom: 1em;
 }
 
 .gallery h1 {
-  /* Needs top padding, but padding is making whole section stretch vertically - need to adjust padding/font-size to keep everything on one page without scrolling */
   padding-top: .5em;
   font-size: 2.5em;
-}
-
-.photo-grid {
-  padding-bottom: 1em;
 }
 
 .photo-grid ul {
@@ -435,7 +442,7 @@ blockquote q::before {
 /* Footer                     */
 /* ========================== */
 footer {
-  min-height: 10vh;
+  height: 10vh;
 
   background-color: rgb(17, 17, 17, 0.8);
   color: white;
@@ -457,6 +464,7 @@ footer a {
 }
 
 footer p {
+  font-family: 'Montserrat', sans-serif;
   margin: .5em 0 0 0;
 }
 
