@@ -346,30 +346,21 @@ blockquote q::before {
 /* ========================== */
 
 .contact {
-  width: 65vw;
+  width: 50vw;
   margin: auto;
-
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-
-  grid-gap: 2em;
 }
 
-.contact section {
-  padding-top: 5em;
+.contact h1 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 2.6em;
 }
-
 .contact a {
   padding: .2em;
 
   font-weight: bold;
 
   color: #70CAD1;
-}
-
-/* Text line spacing */
-.contact h1 {
-  margin-bottom: .2em;
 }
 
 /* Form Styling */
@@ -481,36 +472,6 @@ footer p {
   .red-river {
     grid-area: red-river;
   }
-
-@media (max-width: 640px) {
-  /* Contact Form */
-  .contact {
-    display: grid;
-    grid-gap: 0;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-      "blurb"
-      "form";
-  }
-
-  .contact section {
-    padding-top: 0;
-  }
-
-  .contact-blurb {
-    grid-area: blurb;
-
-    align-self: center;
-  }
-
-  section.contact-form {
-    padding-top: 0;
-    padding-bottom: 1em;
-
-    grid-area: form;
-  }
-}
 
 /* MOBILE PHONES */
 @media (max-width: 540px) {
