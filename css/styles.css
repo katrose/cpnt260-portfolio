@@ -517,9 +517,10 @@ footer p {
 
   /* Font Sizing */
   /* All h1's except landing page */
-  .blog h1 .blog-post h1, .gallery h1 .contact h1 {
+  .blog h1, .blog-post h1, .gallery h1, .contact h1 {
     font-size: 2em;
   }
+
   /* Blog Post Grid */
   .blog {
     width: 100vw;
@@ -563,5 +564,9 @@ footer p {
   /* Blog Post */
   .blog-post {
     width: 100vw;
+  }
+  
+  .contact h2 {
+    font-size: 1em;
   }
 }
