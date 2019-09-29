@@ -342,6 +342,12 @@ blockquote q::before {
   border: 1px solid black;
 }
 
+/* CSS Transitions */
+.photo-grid img:hover {
+  transform: scale(1.1);
+  transition: all .25s ease;
+}
+
 /* Contact Page               */
 /* ========================== */
 
