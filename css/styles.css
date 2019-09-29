@@ -32,7 +32,7 @@ main {
   /* background-color: rgba(35, 146, 184, 0.5 ); */
   background-color: rgba(255, 255, 255, 0.1);
 
-  background-image: url('/img/link-hoang-UoqAR2pOxMo-unsplash.jpg');
+  background-image: url('/img/janko-ferlic-specialdaddy-sfL_QOnmy00-unsplash.jpg');
   background-blend-mode: lighten;
   background-repeat: no-repeat;
   background-size: cover;
@@ -54,7 +54,7 @@ main {
 .hero h1, nav {
   padding: .3em;
 
-  background-color: rgb(17, 17, 17, 1);
+  background-color: rgb(17, 17, 17, 0.8);
   color: white;
 
   text-align: center;
