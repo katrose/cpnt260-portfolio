@@ -107,18 +107,20 @@ nav a {
   margin-bottom: 2em;
 }
 
-.blog h1, .blog h2 {
+.blog h1 {
   margin-bottom: 1em;
   font-size: 2.5em;
 }
 
-.blog h3 {
-  margin-bottom: 2em;
-  border-bottom: 1px solid black;
+.blog h2 {
+  margin-bottom: 1em;
 }
 
 /* Blog Card Grid */
+/* 1x4 Card Pattern (Desktop) */
 .blog-card-grid {
+  padding-bottom: 1.2em;
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 1em;
@@ -483,5 +485,36 @@ footer p {
   section.contact-form {
     padding-top: 0;
     grid-area: form;
+  }
+}
+
+@media (max-width: 540px) {
+  /* Blog Post Grid */
+  .blog {
+    width: 100vw;
+  }
+  
+  .blog-card-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "cross-manage" 
+      "from-far-away"
+      "qq-sweeper"   
+      "red-river";
+  }
+
+  .cross-manage {
+    grid-area: cross-manage;
+  }
+  .from-far-away {
+    grid-area: from-far-away;
+  }
+  .qq-sweeper {
+    grid-area: qq-sweeper;
+  }
+  .red-river {
+    grid-area: red-river;
   }
 }
