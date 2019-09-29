@@ -8,6 +8,9 @@ body {
 
   background-color: rgb(236, 236, 233);
   color: #3e3e3e;
+
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 h1 {
@@ -197,7 +200,7 @@ nav a {
 /* ========================== */
 
 .blog-post {
-  margin: 10px auto 0;
+  margin: auto;
   padding: 1em;
 
   width: 50vw;
@@ -509,7 +512,14 @@ footer p {
   }
 }
 
+/* MOBILE PHONES */
 @media (max-width: 540px) {
+
+  /* Font Sizing */
+  /* All h1's except landing page */
+  .blog h1 .blog-post h1, .gallery h1 .contact h1 {
+    font-size: 2em;
+  }
   /* Blog Post Grid */
   .blog {
     width: 100vw;
@@ -548,5 +558,10 @@ footer p {
   .blurb-item img {
     margin: auto;
     max-height: 250px;
+  }
+
+  /* Blog Post */
+  .blog-post {
+    width: 100vw;
   }
 }
