@@ -439,8 +439,7 @@ footer p {
 
 /* MEDIA QUERIES              */
 /* ========================== */
-@media (max-width: 640px) {
-
+@media (max-width: 1545px) {
   /* Blog Card Grid */
   .blog-card-grid {
     display: grid;
@@ -463,6 +462,8 @@ footer p {
     grid-area: red-river;
   }
 
+}
+@media (max-width: 640px) {
   /* Contact Form */
   .contact {
     display: grid;
