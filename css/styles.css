@@ -127,6 +127,11 @@ nav a {
   align-items: end;
 }
 
+.blog-card-grid img {
+  object-fit: contain;
+  max-width: 100%;
+}
+
 /* Make content stretch horizontally */
 .short-post-grid .blog-item {
   display: flex;
@@ -136,12 +141,20 @@ nav a {
   margin-right: 1em;
 }
 
-/* Card */
+/* Cards */
 .blog-item {
   padding: .7em;
 
   background-color: white;
   border: 1px solid rgb(216, 216, 216);
+}
+
+.blog-item img {
+  margin-bottom: .7em;
+}
+
+.blog-item p, .blurb-item p {
+  font-family: 'Lora', serif;
 }
 
 .blurb-item {
@@ -151,15 +164,6 @@ nav a {
   border: 1px solid rgb(216, 216, 216);
 
   display: flex;
-}
-
-.blog-item img {
-  margin-bottom: .7em;
-}
-
-.blog-card-grid img {
-  object-fit: contain;
-  max-width: 100%;
 }
 
 /* "Read More" URLs */
@@ -466,7 +470,6 @@ footer p {
     grid-area: red-river;
   }
 
-}
 @media (max-width: 640px) {
   /* Contact Form */
   .contact {
