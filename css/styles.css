@@ -16,9 +16,13 @@ h1 {
 }
 
 header {
-  height: 10vh;
+  height: 7vh;
 
   background-color: rgb(17, 17, 17, 0.8);
+}
+
+main {
+  min-height: 83vh;
 }
 
 /* Nav Bar                    */
@@ -46,15 +50,10 @@ nav a {
   border-bottom: 1px dashed;
 }
 
-main {
-  min-height: 80vh;
-}
-
 /*  Hero Section              */
 /* ========================== */
 
 .hero {
-  height: 80vh;
   /* background-color: rgba(35, 146, 184, 0.5 ); */
   background-color: rgba(255, 255, 255, 0.1);
 
@@ -333,10 +332,8 @@ blockquote q::before {
   width: 65vw;
   margin: auto;
 
-  /* Use grid to align the top of section elements */
   display: grid;
   grid-template-columns: 2fr 1fr;
-  /* grid-template-rows: 1fr 3fr; */
 
   grid-gap: 2em;
 }
@@ -344,17 +341,6 @@ blockquote q::before {
 .contact section {
   padding-top: 5em;
 }
-
-/* Use grid to align the top of section elements */
-/* .contact section:nth-child(1) {
-  grid-row: 2 / 3;
-  grid-column: 1 / 2;
-}
-
-.contact section:nth-child(2) {
-  grid-row: 2 / 3;
-  grid-column: 2 / 3;
-} */
 
 .contact a {
   padding: .2em;
@@ -453,7 +439,7 @@ footer p {
   margin: .5em 0 0 0;
 }
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES FOR GALLERY  */
 /* Code by Jen Simmons */
 /* Photos too small, need to adapt */
 @media (min-width: 360px) {
@@ -485,5 +471,26 @@ footer p {
   .photo-grid ul {
     grid-template-columns: repeat(9, 1fr);  
     grid-auto-rows: 11vw;  
+  }
+}
+
+/* MEDIA QUERIES FOR CONTACT FORM */
+@media (max-width: 640px) {
+  .contact {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "blurb"
+      "form";
+  }
+
+  .contact-blurb {
+    grid-area: blurb;
+  }
+
+  section.contact-form {
+    padding-top: 0;
+    grid-area: form;
   }
 }
