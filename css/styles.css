@@ -217,7 +217,6 @@ nav a {
 }
 
 /* Pull Quote Styling */
-
 blockquote {
   padding: 1em;
 
@@ -525,6 +524,12 @@ footer p {
   /* Blog Post */
   .blog-post {
     width: 100vw;
+  }
+  
+  /* Contact Page */
+  .contact {
+    width: 100vw;
+    padding: 1em;
   }
   
   .contact h2 {
