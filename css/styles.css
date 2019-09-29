@@ -107,6 +107,11 @@ nav a {
   margin-bottom: 2em;
 }
 
+.blog h1, .blog h2 {
+  margin-bottom: 1em;
+  font-size: 2.5em;
+}
+
 .blog h3 {
   margin-bottom: 2em;
   border-bottom: 1px solid black;
@@ -171,13 +176,6 @@ nav a {
 .blog-item a:hover {
   box-shadow: inset 5px -20px 0 0 rgba(130, 206, 228, 0.3);
 }
-
-/* Positioning Adjustments */
-.blog h1, .blog h2 {
-  margin-bottom: 1em;
-  text-align: center;
-}
-
 
 /* Blog Post                  */
 /* ========================== */
@@ -287,9 +285,6 @@ blockquote q::before {
 .blog-img-2 {
   float: left;
 
-  /* The following two functions (polygon & url) do roughly the same thing for this image. The polygon doesn't shape all the way to the bottom; text goes back to rectangular shape near the bottom right vertex of image. Tried to tweak with CSS Shapes Editor (Chrome Extension) but didn't get it to work  */
-
-  /* shape-outside: polygon(80% 0, 100% 100%, 0 100%); */
   shape-outside: url('/img/blog/all-girls-team.png');
 
   shape-margin: .5em;
@@ -442,8 +437,33 @@ footer p {
   margin: .5em 0 0 0;
 }
 
-/* MEDIA QUERIES FOR CONTACT FORM */
+/* MEDIA QUERIES              */
+/* ========================== */
 @media (max-width: 640px) {
+
+  /* Blog Card Grid */
+  .blog-card-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+      "cross-manage from-far-away"
+      "qq-sweeper   red-river";
+  }
+
+  .cross-manage {
+    grid-area: cross-manage;
+  }
+  .from-far-away {
+    grid-area: from-far-away;
+  }
+  .qq-sweeper {
+    grid-area: qq-sweeper;
+  }
+  .red-river {
+    grid-area: red-river;
+  }
+
+  /* Contact Form */
   .contact {
     display: grid;
     grid-template-rows: 1fr 2fr;
