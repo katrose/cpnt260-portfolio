@@ -58,6 +58,10 @@ nav a:hover {
   color: rgb(173, 215, 229)
 }
 
+nav .fa-book-open {
+  padding-right: .5em;
+}
+
 /*  Hero Section              */
 /* ========================== */
 
@@ -496,6 +500,12 @@ footer p {
 
 /* MOBILE PHONES */
 @media (max-width: 540px) {
+
+  /* Hide logo */
+  nav .fa-book-open {
+    display: none;
+  }
+  
 
   /* Font Sizing */
   .hero h1, .blog h1, .blog-post h1, .gallery h1, .contact h1 {
