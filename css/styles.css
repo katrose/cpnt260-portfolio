@@ -531,13 +531,13 @@ footer p {
     grid-area: red-river;
   }
 
-  .blurb-item {
+  .snippet-box {
     display: grid;
     grid-template-rows: 1fr auto;
     grid-gap: 1em;
   }
 
-  .blurb-item img {
+  .snippet-box img {
     margin: auto;
     max-height: 250px;
   }
