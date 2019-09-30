@@ -1,2 +1,2 @@
-# cpnt260-portfolio
-Portfolio website for CPNT 260
+# Portfolio Website for CPNT 260
+Looks best on Chrome
