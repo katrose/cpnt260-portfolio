@@ -50,6 +50,7 @@ nav ul {
 
 nav a {
   margin: 1em;
+
   border-bottom: 1px dashed;
 }
 
@@ -71,7 +72,6 @@ nav .fa-book-open {
 .hero {
   background-color: rgb(173, 215, 229);
   background-image: url('/img/janko-ferlic-specialdaddy-sfL_QOnmy00-unsplash.jpg');
-
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -83,10 +83,6 @@ nav .fa-book-open {
 
   /* Make each item width of text and not width of container (for background-color) */
   align-items: center;     
-}
-
-.hero .fa-snowflake {
-  text-shadow: 3px 6px white;
 }
 
 .hero h1, .hero p {
@@ -118,8 +114,6 @@ nav .fa-book-open {
   padding: 1em;
 
   width: 70vw;
-
-  min-height: 90vh;
 }
 
 .blog section {
@@ -163,27 +157,18 @@ nav .fa-book-open {
   object-fit: contain;
 }
 
-/* "Read More" URLs */
-.blog-item a {
+/* Blog URLs */
+.blog-item a, .blog-post a {
   font-weight: bold;
   box-shadow: inset 0 -7px 0 0 rgba(130, 206, 228, 0.3);
 }
 
-/* "Read More" URL Hover */
-/* This stacks the background-color and box-shadow on top of one another when hovering - overall color isn't uniform */
-/* 
-.blog-item a:hover {
-  background-color: rgba(19, 149, 186, .15);
-}
-*/
-
-/* BOX-SHADOW: inset | offset-x | offset-y | blur-radius | spread-radius | color */
-.blog-item a:hover {
+.blog-item a:hover, .blog-post a:hover {
   box-shadow: inset 5px -20px 0 0 rgba(130, 206, 228, 0.3);
 }
 
 
-/* Short Post Section */
+/* One Paragraph Review Section  */
 .short-post-section .blog-item {
   display: flex;
 }
@@ -228,14 +213,6 @@ nav .fa-book-open {
 
 .series-info p {
   margin: 0;
-}
-
-.blog-post a {
-  box-shadow: inset 0 -7px 0 0 rgba(130, 206, 228, 0.3);
-}
-
-.blog-post a:hover {
-  box-shadow: inset 5px -20px 0 0 rgba(130, 206, 228, 0.3);
 }
 
 .blog-post .bold-italic {
@@ -290,6 +267,7 @@ nav .fa-book-open {
 .blog-img-2 {
   float: left;
 
+  /* Only works on Chrome!!! */
   shape-outside: polygon(0px 1px, 291px 5px, 370px 466px, 0px 466px);
   shape-outside: url('/img/blog/all-girls-team.png');
 
@@ -306,9 +284,6 @@ blockquote {
 
 blockquote q {
   padding-left: 2em;
-
-  font-family: 'Lora', serif;
-  font-style: italic;
 
   display: block;
   quotes: "“" "”";
@@ -410,13 +385,12 @@ blockquote q::before {
 .contact input[type="text"], textarea {
   padding: .5em;
 
-  font-family: 'Lora', serif;
+  background-color: rgba(173, 215, 229, 0.5);
+
   font-size: 1.1em;
 
   border: 1px solid white;
   border-radius: 15px;
-
-  background-color: rgba(173, 215, 229, 0.5);
 }
 
 .contact .contact-buttons {
@@ -436,14 +410,14 @@ blockquote q::before {
 .contact input[type="submit"], input[type="reset"] {
   padding: .5em 1em;
 
+  background-color: rgb(173, 215, 229, 0.5);
+  color: inherit;
+
   font-family: inherit;
   font-weight: bold;
 
   border: 1px solid white;
   border-radius: 20px;
-
-  background-color: rgb(173, 215, 229, 0.5);
-  color: inherit;
 }
 
 /* Footer                     */
@@ -465,8 +439,8 @@ footer {
 footer .social-media {
   padding: .5em;
 }
+
 footer a {
-  text-decoration: none;
   color: inherit;
 }
 
@@ -501,7 +475,7 @@ footer p {
     grid-area: red-river;
   }
 
-/* MOBILE PHONES */
+/* MOBILE */
 @media (max-width: 540px) {
 
   /* Hide logo */
@@ -509,13 +483,13 @@ footer p {
     display: none;
   }
   
-
   /* Font Sizing */
   .hero h1, .blog h1, .blog-post h1, .gallery h1, .contact h1 {
     font-size: 2em;
   }
 
-  /* Blog Post Grid */
+  /*  Blog Post Grid */
+  /* --------------- */
   .blog {
     width: 100vw;
   }
@@ -555,7 +529,8 @@ footer p {
     max-height: 250px;
   }
 
-  /* Blog Post */
+  /*  Blog Post  */
+  /* ----------- */
   .blog-post {
     width: 100vw;
   }
@@ -575,7 +550,8 @@ footer p {
     float: none;
   }
 
-  /* Contact Page */
+  /*  Contact Page  */
+  /* -------------- */
   .contact {
     width: 100vw;
     padding: 1em;
