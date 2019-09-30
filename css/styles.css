@@ -26,7 +26,7 @@ main {
 /* ========================== */
 header {
   height: 10vh;
-  background-color: rgba(17, 17, 17, 0.8);
+  background-color: rgb(17, 17, 17);
 
   display: flex;
   justify-content: center;
@@ -91,16 +91,17 @@ nav a:hover {
   text-align: center;
 }
 
-.hero p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.6em;
-}
-
-/* Minor positioning adjustments */
 .hero h1 {
+  /* Minor positioning adjustments */
   margin-top: .5em;
   margin-bottom: .5em;
 }
+
+.hero p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3em;
+}
+
 
 /* Blog Cards                 */
 /* ========================== */
@@ -210,6 +211,10 @@ nav a:hover {
   background-color: white;
 }
 
+.blog-post p, .blog-post ul {
+  line-height: 1.4em;
+}
+
 .series-info {
   margin-bottom: 1.5em;
 }
@@ -224,6 +229,64 @@ nav a:hover {
 
 .blog-post a:hover {
   box-shadow: inset 5px -20px 0 0 rgba(130, 206, 228, 0.3);
+}
+
+.blog-post .bold-italic {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.blog-post .article-header {
+  /* Make header fill space of padding from parent container */
+  margin: -1em -1em 1em -1em;
+  padding: 1.5em;
+
+  background-color: rgb(17, 17, 17, 0.8);
+  color: white;
+}
+
+.blog-post .author-date {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.blog-post .author-date p {
+  margin: 0;
+}
+
+.blog-post h1 {
+  margin: 0;
+  margin-bottom: .4em;
+
+  font-weight: bold;
+}
+
+.blog-post h2 {
+  margin-bottom: .5em;
+
+  border-bottom: 1px solid black;
+}
+
+.blog-post img {
+  display: block;
+
+  /* Make sure it scales with parent container */
+  max-width: 100%;
+}
+
+/* Image Positioning */
+.blog-img-1 {
+  float: right;
+  margin: 0 0 0 .5em;
+}
+
+.blog-img-2 {
+  float: left;
+
+  shape-outside: polygon(0px 1px, 291px 5px, 370px 466px, 0px 466px);
+  shape-outside: url('/img/blog/all-girls-team.png');
+
+  shape-margin: .5em;
 }
 
 /* Pull Quote Styling */
@@ -255,69 +318,6 @@ blockquote q::before {
   position: absolute;
   left: 0;
   top: 0;
-}
-
-.blog-post .bold-italic {
-  font-weight: bold;
-  font-style: italic;
-}
-
-.blog-post .article-header {
-  /* Make header fill space of padding from parent container */
-  margin: -1em -1em 1em -1em;
-  padding: 1.5em;
-
-  background-color: rgb(17, 17, 17);
-  color: white;
-}
-
-.blog-post .author-date {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.blog-post .author-date p {
-  margin: 0;
-}
-
-.blog-post h1 {
-  margin: 0;
-  margin-bottom: .4em;
-
-  font-weight: bold;
-}
-
-.blog-post h2 {
-  margin-bottom: .5em;
-
-  border-bottom: 1px solid black;
-}
-
-.blog-post p, .blog-post ul {
-  font-family: 'Lora', serif;
-  line-height: 1.4em;
-}
-
-.blog-post img {
-  display: block;
-
-  /* Make sure it scales with parent container */
-  max-width: 100%;
-}
-
-/* Image Positioning */
-.blog-img-1 {
-  float: right;
-  margin: 0 0 0 .5em;
-}
-
-.blog-img-2 {
-  float: left;
-
-  shape-outside: polygon(0px 1px, 291px 5px, 370px 466px, 0px 466px);
-  shape-outside: url('/img/blog/all-girls-team.png');
-
-  shape-margin: .5em;
 }
 
 /* Gallery                    */
@@ -444,7 +444,7 @@ blockquote q::before {
 footer {
   height: 10vh;
 
-  background-color: rgb(17, 17, 17, 0.8);
+  background-color: rgb(17, 17, 17);
   color: white;
 
   text-align: center;
@@ -498,8 +498,7 @@ footer p {
 @media (max-width: 540px) {
 
   /* Font Sizing */
-  /* All h1's except landing page */
-  .blog h1, .blog-post h1, .gallery h1, .contact h1 {
+  .hero h1, .blog h1, .blog-post h1, .gallery h1, .contact h1 {
     font-size: 2em;
   }
 
